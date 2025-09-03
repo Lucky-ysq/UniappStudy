@@ -17,6 +17,12 @@
 			"style": {
 				"navigationBarTitleText": "home"
 			}
+		},
+		{
+			"path": "pages/shop/shop",
+			"style": {
+				"navigationBarTitleText": "shop"
+			}
 		}
 	],
 	"globalStyle": {
@@ -25,18 +31,5 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {},
-	"subPackages": [
-		{
-			"root": "pages",
-			"pages": [
-				{
-					"path": "home",
-					"style": {
-						"navigationBarTitleText": "home"
-					}
-				}
-			]
-		}
-	]
+	"uniIdRouter": {}
 }

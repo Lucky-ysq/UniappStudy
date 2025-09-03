@@ -1,0 +1,1 @@
+<view><view wx:if="{{a}}">淘宝</view><view wx:else>京东</view><view bindtap="{{b}}">点击换平台</view></view>
