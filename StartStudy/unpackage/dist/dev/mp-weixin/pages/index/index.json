@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "uni-app",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "user-shop": "../../components/UserShop/UserShop"
   }

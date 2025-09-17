@@ -7,8 +7,9 @@
 
 </template>
 
-<script lang="ts" setup>
-import {ref} from 'vue'
+<script setup>
+import {ref} from 'vue';
+
 let shop = ref(false)
 
 </script>

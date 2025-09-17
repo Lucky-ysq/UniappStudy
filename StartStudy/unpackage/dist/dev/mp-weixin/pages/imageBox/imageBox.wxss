@@ -1,0 +1,37 @@
+
+.bodyImg.data-v-be56699b {
+		padding: 50rpx;
+}
+.box.data-v-be56699b {
+		margin-bottom: 40rpx;
+		box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.08);
+		border-radius: 30rpx;
+}
+.pic image.data-v-be56699b {
+		width: 100%;
+}
+.text.data-v-be56699b {
+		padding: 20rpx 0;
+		font-size: 32rpx;
+		text-align: center;
+}
+.buttonSty.data-v-be56699b {
+		position: fixed;
+		bottom: 80rpx;
+		right: 20rpx;
+		padding-bottom: env(safe-area-inset-bottom);
+}
+.item.data-v-be56699b {
+		width: 90rpx;
+		height: 90rpx;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0.9);
+		margin-bottom: 20rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #8b8585;
+}
+.loadImg.data-v-be56699b {
+		padding-bottom: calc(env(safe-area-inset-bottom) + 50rpx);
+}

@@ -54,6 +54,7 @@
 import {ref} from 'vue';
 
 const title = ref('你好');
+uni.setStorageSync('name', '张三');
 
 
 </script>

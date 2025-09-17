@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/imageBox/imageBox",
     "pages/index/index",
     "pages/demo/demo",
     "pages/home/home",
@@ -10,6 +11,22 @@
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城"
+      }
+    ]
   },
   "usingComponents": {}
 }

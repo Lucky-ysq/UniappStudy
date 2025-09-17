@@ -12,6 +12,7 @@ const _sfc_main = {
   __name: "index",
   setup(__props) {
     const title = common_vendor.ref("你好");
+    common_vendor.index.setStorageSync("name", "张三");
     return (_ctx, _cache) => {
       return {
         a: common_vendor.t(title.value),
@@ -21,3 +22,4 @@ const _sfc_main = {
   }
 };
 wx.createPage(_sfc_main);
+//# sourceMappingURL=../../../.sourcemap/mp-weixin/pages/index/index.js.map
