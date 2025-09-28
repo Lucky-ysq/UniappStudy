@@ -1,0 +1,1 @@
+<view class="titleSty data-v-7123040e"><view class="left data-v-7123040e"><slot name="left"></slot></view><view class="right data-v-7123040e"><slot name="right"></slot></view></view>

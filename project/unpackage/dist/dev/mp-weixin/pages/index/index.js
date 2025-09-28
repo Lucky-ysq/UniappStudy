@@ -3,12 +3,16 @@ const common_vendor = require("../../common/vendor.js");
 const common_assets = require("../../common/assets.js");
 if (!Array) {
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
-  _easycom_uni_icons2();
+  const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
+  (_easycom_uni_icons2 + _easycom_uni_dateformat2)();
 }
 const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
+const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 if (!Math) {
-  _easycom_uni_icons();
+  (_easycom_uni_icons + _easycom_uni_dateformat + Titile + gripIamge)();
 }
+const Titile = () => "../../components/titile/titile.js";
+const gripIamge = () => "../../components/gripImag/gripImag.js";
 const _sfc_main = {
   __name: "index",
   setup(__props) {
@@ -28,6 +32,27 @@ const _sfc_main = {
         f: common_vendor.p({
           type: "right",
           size: "20"
+        }),
+        g: common_vendor.p({
+          type: "calendar",
+          size: "20",
+          color: "#28B389"
+        }),
+        h: common_vendor.p({
+          date: /* @__PURE__ */ new Date(),
+          format: "dd日"
+        }),
+        i: common_vendor.f(8, (value, k0, i0) => {
+          return {};
+        }),
+        j: common_assets._imports_3,
+        k: common_vendor.f(8, (value, k0, i0) => {
+          return {
+            a: "1cf27b2a-6-" + i0
+          };
+        }),
+        l: common_vendor.p({
+          isBox: true
         })
       };
     };
