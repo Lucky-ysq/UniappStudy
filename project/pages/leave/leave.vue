@@ -1,5 +1,5 @@
 <template>
-  <view class="leave">
+  <view class="leave pageColor">
     <view class="leaveCentent">
       <gripImag v-for="value in 15"></gripImag>
     </view>

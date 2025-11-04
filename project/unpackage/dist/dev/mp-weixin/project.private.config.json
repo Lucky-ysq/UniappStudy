@@ -3,5 +3,18 @@
   "projectname": "project",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/limitList/limitList",
+          "pathName": "pages/limitList/limitList",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

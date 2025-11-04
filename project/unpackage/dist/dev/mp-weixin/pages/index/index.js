@@ -23,8 +23,7 @@ const _sfc_main = {
         c: common_assets._imports_2,
         d: common_vendor.p({
           type: "sound-filled",
-          size: "20",
-          color: "#28B389"
+          size: "20"
         }),
         e: common_vendor.f(5, (value, k0, i0) => {
           return {};
@@ -35,8 +34,7 @@ const _sfc_main = {
         }),
         g: common_vendor.p({
           type: "calendar",
-          size: "20",
-          color: "#28B389"
+          size: "20"
         }),
         h: common_vendor.p({
           date: /* @__PURE__ */ new Date(),

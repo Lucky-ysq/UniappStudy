@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/leave/leave",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/limitList/limitList",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationBarTextStyle": "black",

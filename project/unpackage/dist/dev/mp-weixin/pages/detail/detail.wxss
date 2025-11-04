@@ -1,0 +1,54 @@
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.topView.data-v-eca06f3c {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.topView swiper.data-v-eca06f3c {
+  width: 100%;
+  height: 100%;
+}
+.topView swiper swiper-item image.data-v-eca06f3c {
+  width: 100%;
+  height: 100%;
+}
+.topView .viewTop > view.data-v-eca06f3c {
+  position: absolute;
+  color: #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.topView .viewTop .limit.data-v-eca06f3c {
+  top: 10vh;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10rpx 28rpx;
+  border-radius: 32rpx;
+  line-height: 1em;
+  -webkit-backdrop-filter: blur(10rpx);
+          backdrop-filter: blur(10rpx);
+}
+.topView .viewTop .time.data-v-eca06f3c {
+  top: calc(10vh + 50rpx);
+  font-size: 160rpx;
+  font-weight: 100;
+  text-shadow: 0 4rpx rgba(0, 0, 0, 0.3);
+}
+.topView .viewTop .day.data-v-eca06f3c {
+  top: calc(10vh + 260rpx);
+  font-size: 32rpx;
+  text-shadow: 0 2rpx rgba(0, 0, 0, 0.3);
+}

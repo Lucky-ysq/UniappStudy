@@ -1,6 +1,6 @@
 <template>
-  <view class="user">
-    <view class="ImageSty">
+  <view class="user pageColor">
+    <view class="ImageSty ">
       <view class="bac">
         <image src="/static/xxmLogo.png" mode="aspectFill" />
       </view>
@@ -12,22 +12,42 @@
       </view>
     </view>
     <view class="section ">
-      <view class="row" v-for="value in 2">
-        <view class="left">
-          <uni-icons type="contact" size="20" color="#28B389"></uni-icons>
-          <view class="text">
-            我的下载
+      <navigator url="/pages/leave/leave" open-type="reLaunch">
+        <view class="row">
+          <view class="left">
+            <uni-icons type="contact" size="20"></uni-icons>
+            <view class="text">
+              我的下载
+            </view>
+          </view>
+          <view class="right">
+            <view class="text">22</view>
+            <uni-icons type="right" size="16"></uni-icons>
           </view>
         </view>
-        <view class="right">
-          <view class="text">22</view>
-          <uni-icons type="right" size="16"></uni-icons>
+      </navigator>
+
+
+      <navigator url="/pages/leave/leave" open-type="reLaunch">
+        <view class="row">
+          <view class="left">
+            <uni-icons type="contact" size="20"></uni-icons>
+            <view class="text">
+              我的收藏
+            </view>
+          </view>
+          <view class="right">
+            <view class="text">22</view>
+            <uni-icons type="right" size="16"></uni-icons>
+          </view>
         </view>
-      </view>
+      </navigator>
+
+
 
       <view class="row">
         <view class="left">
-          <uni-icons type="chatboxes-filled" size="20" color="#28B389"></uni-icons>
+          <uni-icons type="chatboxes-filled" size="20"></uni-icons>
           <view class="text">
             联系客服
           </view>
@@ -44,22 +64,40 @@
         <!-- #endif -->
       </view>
 
+
     </view>
 
 
     <view class="section too">
-      <view class="row" v-for="value in 2">
-        <view class="left">
-          <uni-icons type="contact" size="20" color="#28B389"></uni-icons>
-          <view class="text">
-            我的下载
+      <navigator url="/pages/leave/leave" open-type="reLaunch">
+        <view class="row">
+          <view class="left">
+            <uni-icons type="contact" size="20"></uni-icons>
+            <view class="text">
+              我的下载
+            </view>
+          </view>
+          <view class="right">
+            <view class="text">22</view>
+            <uni-icons type="right" size="16"></uni-icons>
           </view>
         </view>
-        <view class="right">
-          <view class="text">22</view>
-          <uni-icons type="right" size="16"></uni-icons>
+      </navigator>
+
+      <navigator url="/pages/leave/leave" open-type="reLaunch">
+        <view class="row">
+          <view class="left">
+            <uni-icons type="contact" size="20"></uni-icons>
+            <view class="text">
+              我的下载
+            </view>
+          </view>
+          <view class="right">
+            <view class="text">22</view>
+            <uni-icons type="right" size="16"></uni-icons>
+          </view>
         </view>
-      </view>
+      </navigator>
     </view>
   </view>
 </template>
@@ -108,13 +146,14 @@
 
   .row {
     width: 100%;
-    height: 80rpx;
+    height: 100rpx;
     padding: 0 25rpx;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1rpx solid #eee;
     position: relative;
+    background-color: #fff;
 
     &:last-child {
       border-bottom: none;
@@ -123,6 +162,13 @@
     .left {
       display: flex;
       align-items: center;
+
+      :deep() {
+        .uni-icons {
+          color: $theme-color !important;
+        }
+      }
+
 
       .text {
         padding-left: 15rpx;
@@ -143,7 +189,7 @@
 
     button {
       width: 100%;
-      height: 80rpx;
+      height: 100rpx;
       position: absolute;
       top: 0;
       left: 0;
@@ -155,6 +201,6 @@
 }
 
 .too {
-  margin-top: 50rpx;
+  margin-top: 80rpx;
 }
 </style>

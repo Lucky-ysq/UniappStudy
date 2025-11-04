@@ -1,1 +1,1 @@
-<view class="leave data-v-70c09db4"><view class="leaveCentent data-v-70c09db4"><grip-imag wx:for="{{a}}" wx:for-item="value" class="data-v-70c09db4" u-i="{{value.a}}" bind:__l="__l"></grip-imag></view></view>
+<view class="leave pageColor data-v-70c09db4"><view class="leaveCentent data-v-70c09db4"><grip-imag wx:for="{{a}}" wx:for-item="value" class="data-v-70c09db4" u-i="{{value.a}}" bind:__l="__l"></grip-imag></view></view>

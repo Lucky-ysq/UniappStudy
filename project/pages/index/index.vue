@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view class="content pageColor">
 		<!-- 轮播图 -->
 		<view class="bannerSty">
 			<swiper indicator-dots autoplay circular indicator-color="rgba(255,255,255,0.6)"
@@ -19,7 +19,7 @@
 		<!-- 公告 -->
 		<view class="bannerTwoSty">
 			<view class="left">
-				<uni-icons type="sound-filled" size="20" color="#28B389"></uni-icons>
+				<uni-icons type="sound-filled" size="20"></uni-icons>
 				<view class="text">公告</view>
 			</view>
 			<view class="center">
@@ -42,7 +42,7 @@
 				</template>
 				<template #right>
 					<view class="dateSty">
-						<uni-icons type="calendar" size="20" color="#28B389"></uni-icons>
+						<uni-icons type="calendar" size="20"></uni-icons>
 						<view class="text">
 							<uni-dateformat :date="new Date()" format="dd日"></uni-dateformat>
 						</view>
@@ -106,7 +106,7 @@ import gripIamge from '../../components/gripImag/gripImag.vue';
 			image {
 				width: 100%;
 				height: 100%;
-				border-radius: 10rpx;
+				border-radius: 20rpx;
 			}
 		}
 	}
@@ -127,8 +127,15 @@ import gripIamge from '../../components/gripImag/gripImag.vue';
 		align-items: center;
 		justify-content: center;
 
+		:deep() {
+			.uni-icons {
+				color: $theme-color !important;
+			}
+		}
+
+
 		.text {
-			color: #28b389;
+			color: $theme-color;
 			font-size: 28rpx;
 			font-weight: 600;
 			margin-bottom: 1rpx;
@@ -166,9 +173,15 @@ import gripIamge from '../../components/gripImag/gripImag.vue';
 		align-items: center;
 		justify-content: center;
 
+		:deep() {
+			.uni-icons {
+				color: $theme-color !important;
+			}
+		}
+
 		.text {
 			font-size: 28rpx;
-			color: #28b389;
+			color: $theme-color;
 			margin-left: 5rpx;
 		}
 	}
@@ -202,15 +215,17 @@ import gripIamge from '../../components/gripImag/gripImag.vue';
 
 .TwoMinImageSty {
 	padding-bottom: 40rpx;
+
 	.text {
 		font-size: 30rpx;
 		color: #666;
 	}
-	.imageSty{
-		padding:0 30rpx;
+
+	.imageSty {
+		padding: 0 30rpx;
 		display: grid;
 		gap: 20rpx;
-		grid-template-columns: repeat(3,1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 </style>

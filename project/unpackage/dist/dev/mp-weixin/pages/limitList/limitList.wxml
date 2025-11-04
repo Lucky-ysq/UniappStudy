@@ -1,0 +1,1 @@
+<view class="limit data-v-2324a4de"><view class="centent data-v-2324a4de"><navigator wx:for="{{a}}" wx:for-item="a" url="/pages/detail/detail" class="item data-v-2324a4de"><image class="data-v-2324a4de" src="{{b}}" mode="aspectFill"></image></navigator></view></view>

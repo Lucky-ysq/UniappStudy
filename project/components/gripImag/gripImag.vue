@@ -1,12 +1,12 @@
 <template>
   <view class="centent">
-    <navigator class="box" v-if="!isBox">
+    <navigator url="/pages/limitList/limitList" class="box" v-if="!isBox">
       <image src="/common/image/classify1.jpg" mode="aspectFill" />
       <view class="bottomText">鞠婧祎</view>
       <view class="leftText">3天前更新</view>
     </navigator>
 
-    <navigator class="box more" v-if="isBox">
+    <navigator url="/pages/leave/leave" open-type="reLaunch" class="box more" v-if="isBox">
       <image src="/common/image/more.jpg" mode="aspectFill" />
       <view class="bottomText">
         <uni-icons type="more-filled" size="26" color="#fff"></uni-icons>
