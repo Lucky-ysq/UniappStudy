@@ -1,5 +1,8 @@
 <template>
 	<view class="content pageColor">
+		<all-nav-bar>
+			<slot>标题</slot>
+		</all-nav-bar>
 		<!-- 轮播图 -->
 		<view class="bannerSty">
 			<swiper indicator-dots autoplay circular indicator-color="rgba(255,255,255,0.6)"
@@ -87,6 +90,7 @@ import {
 } from 'vue'
 import Titile from '../../components/titile/titile.vue';
 import gripIamge from '../../components/gripImag/gripImag.vue';
+import allNavBar from '../../components/all-nav-bar/all-nav-bar.vue'
 </script>
 
 <style lang="scss" scoped>
