@@ -144,7 +144,7 @@
 
 	// 确认评分
 	const userScoreQuiet = () => {
-		console.log("评分成功");
+		console.log("评分好了");
 	}
 </script>
 
