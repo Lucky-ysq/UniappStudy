@@ -5,6 +5,7 @@
     "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
     "uni-dateformat": "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat",
     "titile": "../../components/titile/titile",
-    "grip-iamge": "../../components/gripImag/gripImag"
+    "grip-iamge": "../../components/gripImag/gripImag",
+    "all-nav-bar": "../../components/all-nav-bar/all-nav-bar"
   }
 }

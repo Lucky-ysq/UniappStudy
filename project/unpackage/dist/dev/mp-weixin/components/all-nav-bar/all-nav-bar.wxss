@@ -1,0 +1,47 @@
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.all .navBar.data-v-1760e8ad {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, transparent, #fff 400rpx), linear-gradient(to right, #beecd8 20%, #f4e2d8);
+}
+.all .navBar .titleBar.data-v-1760e8ad {
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+.all .navBar .titleBar .Bigtext.data-v-1760e8ad {
+  font-size: 22px;
+  font-weight: 700;
+}
+.all .navBar .titleBar .search.data-v-1760e8ad {
+  width: 220rpx;
+  height: 50rpx;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+  border: 1rpx solid #fff;
+}
+.all .navBar .titleBar .search .icon.data-v-1760e8ad {
+  margin-left: 10rpx;
+}
+.all .navBar .titleBar .search .text.data-v-1760e8ad {
+  margin-left: 10rpx;
+}

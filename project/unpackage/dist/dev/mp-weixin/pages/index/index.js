@@ -9,10 +9,11 @@ if (!Array) {
 const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
 const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 if (!Math) {
-  (_easycom_uni_icons + _easycom_uni_dateformat + Titile + gripIamge)();
+  (allNavBar + _easycom_uni_icons + _easycom_uni_dateformat + Titile + gripIamge)();
 }
 const Titile = () => "../../components/titile/titile.js";
 const gripIamge = () => "../../components/gripImag/gripImag.js";
+const allNavBar = () => "../../components/all-nav-bar/all-nav-bar.js";
 const _sfc_main = {
   __name: "index",
   setup(__props) {
@@ -46,7 +47,7 @@ const _sfc_main = {
         j: common_assets._imports_3,
         k: common_vendor.f(8, (value, k0, i0) => {
           return {
-            a: "1cf27b2a-6-" + i0
+            a: "1cf27b2a-7-" + i0
           };
         }),
         l: common_vendor.p({

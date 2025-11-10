@@ -35,20 +35,129 @@
 .topView .viewTop .limit.data-v-eca06f3c {
   top: 10vh;
   background: rgba(0, 0, 0, 0.5);
-  padding: 10rpx 28rpx;
+  padding: 10rpx 24rpx;
   border-radius: 32rpx;
   line-height: 1em;
   -webkit-backdrop-filter: blur(10rpx);
           backdrop-filter: blur(10rpx);
+  font-size: 28rpx;
 }
 .topView .viewTop .time.data-v-eca06f3c {
-  top: calc(10vh + 50rpx);
+  top: calc(10vh + 40rpx);
   font-size: 160rpx;
   font-weight: 100;
   text-shadow: 0 4rpx rgba(0, 0, 0, 0.3);
 }
 .topView .viewTop .day.data-v-eca06f3c {
-  top: calc(10vh + 260rpx);
-  font-size: 32rpx;
+  top: calc(10vh + 240rpx);
+  font-size: 28rpx;
   text-shadow: 0 2rpx rgba(0, 0, 0, 0.3);
+}
+.topView .viewTop .footer.data-v-eca06f3c {
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: 10vh;
+  width: 60vw;
+  height: 120rpx;
+  border-radius: 120rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2rpx 0 rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(20rpx);
+          backdrop-filter: blur(20rpx);
+}
+.topView .viewTop .footer .box.data-v-eca06f3c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rpx 14rpx;
+}
+.topView .viewTop .footer .box .text.data-v-eca06f3c {
+  font-size: 24rpx;
+  color: #333;
+}
+.topView .PopHead.data-v-eca06f3c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topView .PopHead .headCentent.data-v-eca06f3c {
+  font-size: 28rpx;
+  color: #676767;
+}
+.topView .PopHead .close.data-v-eca06f3c {
+  padding: 5rpx;
+}
+.topView .infoMain.data-v-eca06f3c {
+  background: #fff;
+  overflow: hidden;
+  padding: 30rpx;
+  border-radius: 30rpx 30rpx 0 0;
+}
+.topView .infoMain scroll-view.data-v-eca06f3c {
+  max-height: 60vh;
+}
+.topView .infoMain scroll-view .content .row.data-v-eca06f3c {
+  display: flex;
+  padding: 16rpx 0;
+  line-height: 1.7em;
+}
+.topView .infoMain scroll-view .content .row .label.data-v-eca06f3c {
+  text-align: right;
+  width: 160rpx;
+  color: #a7a7a7;
+}
+.topView .infoMain scroll-view .content .row .popupText.data-v-eca06f3c {
+  flex: 1;
+  width: 0;
+}
+.topView .infoMain scroll-view .content .row .scoreText.data-v-eca06f3c {
+  display: flex;
+  align-items: center;
+}
+.topView .infoMain scroll-view .content .row .scoreText .color.data-v-eca06f3c {
+  margin-left: 10rpx;
+}
+.topView .infoMain scroll-view .content .row .color.data-v-eca06f3c {
+  color: #28B389;
+}
+.topView .infoMain scroll-view .content .row .tabs.data-v-eca06f3c {
+  display: flex;
+  flex-wrap: wrap;
+}
+.topView .infoMain scroll-view .content .row .tabs .tab.data-v-eca06f3c {
+  border: 1rpx solid #28B389;
+  color: #28B389;
+  font-size: 22rpx;
+  padding: 10rpx 30rpx;
+  border-radius: 40rpx;
+  line-height: 1em;
+  margin: 0rpx 10rpx 10rpx 0rpx;
+}
+.topView .ScoreMain.data-v-eca06f3c {
+  background: #fff;
+  overflow: hidden;
+  padding: 30rpx;
+  width: 60vw;
+  border-radius: 30rpx;
+}
+.topView .ScoreMain .content.data-v-eca06f3c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx 0;
+}
+.topView .ScoreMain .content .userScoreText.data-v-eca06f3c {
+  color: #ffca3e;
+  padding-left: 10rpx;
+  width: 80rpx;
+  line-height: 1em;
+  text-align: right;
+}
+.topView .ScoreMain .footer.data-v-eca06f3c {
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
