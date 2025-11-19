@@ -13,20 +13,22 @@
 </script>
 
 <style lang="scss" scoped>
-.limit{
-  .centent{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 5rpx;
-    padding: 5rpx;
-    .item{
-      height: 440rpx;
-      image{
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-    }
-  }
-}
+	.limit {
+		.centent {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rpx;
+			padding: 5rpx;
+
+			.item {
+				height: 440rpx;
+
+				image {
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+			}
+		}
+	}
 </style>

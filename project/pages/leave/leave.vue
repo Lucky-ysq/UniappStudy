@@ -1,20 +1,24 @@
 <template>
-  <view class="leave pageColor">
-    <view class="leaveCentent">
-      <gripImag v-for="value in 15"></gripImag>
-    </view>
-  </view>
+	<view class="leave pageColor">
+		<all-nav-bar>
+			<slot>壁纸</slot>
+		</all-nav-bar>
+		<view class="leaveCentent">
+			<gripImag v-for="value in 15"></gripImag>
+		</view>
+	</view>
 </template>
 
 <script setup>
-import gripImag from '../../components/gripImag/gripImag.vue'
+	import gripImag from '../../components/gripImag/gripImag.vue'
+	import allNavBar from '../../components/all-nav-bar/all-nav-bar.vue'
 </script>
 
 <style lang="scss" scoped>
-.leaveCentent {
-  padding: 30rpx;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15rpx;
-}
+	.leaveCentent {
+		padding: 30rpx;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15rpx;
+	}
 </style>

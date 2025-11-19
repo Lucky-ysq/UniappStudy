@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const utils_system = require("../../utils/system.js");
 if (!Array) {
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
   _easycom_uni_icons2();
@@ -11,20 +12,16 @@ if (!Math) {
 const _sfc_main = {
   __name: "all-nav-bar",
   setup(__props) {
-    let statusHeight = common_vendor.index.getSystemInfoSync();
-    let statusHeightValue = common_vendor.ref(statusHeight.statusBarHeight);
-    let { top, height } = common_vendor.index.getMenuButtonBoundingClientRect();
-    let menuButtonValue = common_vendor.ref(height + (top - statusHeightValue.value) * 2);
     return (_ctx, _cache) => {
       return {
-        a: common_vendor.unref(statusHeightValue) + "px",
+        a: common_vendor.unref(utils_system.getStatusHeightValue)() + "px",
         b: common_vendor.p({
           type: "search",
           size: "20",
           color: "#999"
         }),
-        c: common_vendor.unref(menuButtonValue) + "px",
-        d: common_vendor.unref(statusHeightValue) + common_vendor.unref(menuButtonValue) + "px"
+        c: common_vendor.unref(utils_system.getMenuButtonValue)() + "px",
+        d: common_vendor.unref(utils_system.getNavbar)() + "px"
       };
     };
   }

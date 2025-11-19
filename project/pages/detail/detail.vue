@@ -7,8 +7,11 @@
 			</swiper-item>
 		</swiper>
 
+		<!-- 遮蔽层 -->
 		<view class="viewTop" v-if="mask">
-			<view class="goBack"></view>
+			<view class="goBack" @click="goBack" :style="{top: getStatusHeightValue() + 'px'}">
+				<uni-icons type="left" size="24" color="#fff" />
+			</view>
 			<view class="limit">4 / 12</view>
 			<view class="time">
 				<uni-dateformat :date="new Date()" format="hh:mm"></uni-dateformat>
@@ -41,7 +44,7 @@
 					<view></view>
 					<view class="headCentent">壁纸信息</view>
 					<view class="close" @click="closePopupDetail">
-						<uni-icons type="close" size="24"></uni-icons>
+						<uni-icons type="close" size="22"></uni-icons>
 					</view>
 				</view>
 				<scroll-view scroll-y>
@@ -109,228 +112,247 @@
 </template>
 
 <script setup>
-import {
-	ref
-} from 'vue';
+	import {
+		ref
+	} from 'vue';
+	import  {getStatusHeightValue} from '@/utils/system.js'
 
-// 遮罩层
-const mask = ref(true);
-const maskChange = () => {
-	mask.value = !mask.value;
-};
+	// 遮罩层
+	const mask = ref(true);
+	const maskChange = () => {
+		mask.value = !mask.value;
+	};
 
-const popupDetail = ref(null);
-// 开启弹窗
-const openPopupDetail = () => {
-	popupDetail.value.open();
-};
-// 关闭弹窗
-const closePopupDetail = () => {
-	popupDetail.value.close();
-}
+	const popupDetail = ref(null);
+	// 开启弹窗
+	const openPopupDetail = () => {
+		popupDetail.value.open();
+	};
+	// 关闭弹窗
+	const closePopupDetail = () => {
+		popupDetail.value.close();
+	}
 
-const popupScore = ref(null);
-// 开启评分弹窗
-const openPopupScore = () => {
-	popupScore.value.open();
-};
-// 关闭评分弹窗
-const closePopupScore = () => {
-	popupScore.value.close();
-};
+	const popupScore = ref(null);
+	// 开启评分弹窗
+	const openPopupScore = () => {
+		popupScore.value.open();
+	};
+	// 关闭评分弹窗
+	const closePopupScore = () => {
+		popupScore.value.close();
+	};
 
-// 用户默认评分
-const userScore = ref(0);
+	// 用户默认评分
+	const userScore = ref(0);
 
-// 确认评分
-const userScoreQuiet = () => {
-	console.log("评分好了");
-}
+	// 确认评分
+	const userScoreQuiet = () => {
+		console.log("评分好了");
+	}
+	
+	//返回上一页
+	const goBack = () => {
+		uni.navigateBack();
+	}
 </script>
 
 <style lang="scss" scoped>
-.topView {
-	width: 100%;
-	height: 100vh;
-	position: relative;
-
-	swiper {
+	.topView {
 		width: 100%;
-		height: 100%;
+		height: 100vh;
+		position: relative;
 
-		swiper-item {
-			image {
-				width: 100%;
-				height: 100%;
-			}
-		}
-	}
+		swiper {
+			width: 100%;
+			height: 100%;
 
-	.viewTop {
-		&>view {
-			position: absolute;
-			color: #fff;
-			left: 0;
-			right: 0;
-			margin: auto;
-			width: fit-content;
-		}
-
-		.goBack {}
-
-		.limit {
-			top: 10vh;
-			background:
-				rgba(0, 0, 0, 0.5);
-			padding: 10rpx 24rpx;
-			border-radius: 32rpx;
-			line-height: 1em;
-			backdrop-filter: blur(10rpx);
-			font-size: 28rpx;
-		}
-
-		.time {
-			top: calc(10vh + 40rpx);
-			font-size: 160rpx;
-			font-weight: 100;
-			text-shadow: 0 4rpx rgba(0, 0, 0, 0.3);
-		}
-
-		.day {
-			top: calc(10vh + 240rpx);
-			font-size: 28rpx;
-			text-shadow: 0 2rpx rgba(0, 0, 0, 0.3);
-		}
-
-		.footer {
-			background-color: rgba(255, 255, 255, 0.8);
-			bottom: 10vh;
-			width: 60vw;
-			height: 120rpx;
-			border-radius: 120rpx;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			box-shadow: 0 2rpx 0 rgba(0, 0, 0, 0.1);
-			backdrop-filter: blur(20rpx);
-
-			.box {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				padding: 6rpx 14rpx;
-
-				.text {
-					font-size: 24rpx;
-					color: #333;
+			swiper-item {
+				image {
+					width: 100%;
+					height: 100%;
 				}
 			}
 		}
-	}
 
-	.PopHead {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		.viewTop {
+			&>view {
+				position: absolute;
+				color: #fff;
+				left: 0;
+				right: 0;
+				margin: auto;
+				width: fit-content;
+			}
 
-		.headCentent {
-			font-size: 28rpx;
-			color: $text-font-color-2;
-		}
+			.goBack {
+				width: 38px;
+				height: 38px;
+				top: 0;
+				left: 30rpx;
+				margin-left: 0;
+				background: rgba(0, 0, 0, 0.5);
+				border-radius: 100px;
+				border: 1rpx solid rgba(255,255,255,0.3);
+				backdrop-filter: blur(10rpx);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 
-		.close {
-			padding: 5rpx;
-		}
-	}
+			.limit {
+				top: 10vh;
+				background:
+					rgba(0, 0, 0, 0.5);
+				padding: 10rpx 24rpx;
+				border-radius: 32rpx;
+				line-height: 1em;
+				backdrop-filter: blur(10rpx);
+				font-size: 28rpx;
+			}
 
-	.infoMain {
-		background: #fff;
-		overflow: hidden;
-		padding: 30rpx;
-		border-radius: 30rpx 30rpx 0 0;
+			.time {
+				top: calc(10vh + 40rpx);
+				font-size: 160rpx;
+				font-weight: 100;
+				text-shadow: 0 4rpx rgba(0, 0, 0, 0.3);
+			}
 
-		scroll-view {
-			max-height: 60vh;
+			.day {
+				top: calc(10vh + 240rpx);
+				font-size: 28rpx;
+				text-shadow: 0 2rpx rgba(0, 0, 0, 0.3);
+			}
 
-			.content {
-				.row {
+			.footer {
+				background-color: rgba(255, 255, 255, 0.8);
+				bottom: 10vh;
+				width: 60vw;
+				height: 120rpx;
+				border-radius: 120rpx;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				box-shadow: 0 2rpx 0 rgba(0, 0, 0, 0.1);
+				backdrop-filter: blur(20rpx);
+
+				.box {
 					display: flex;
-					padding: 16rpx 0;
-					line-height: 1.7em;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					padding: 6rpx 14rpx;
 
-					.label {
-						text-align: right;
-						width: 160rpx;
-						color: $text-font-color-3;
+					.text {
+						font-size: 24rpx;
+						color: #333;
 					}
+				}
+			}
+		}
 
-					.popupText {
-						flex: 1;
-						width: 0;
-					}
+		.PopHead {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 
-					.scoreText {
+			.headCentent {
+				font-size: 28rpx;
+				color: $text-font-color-2;
+			}
+
+			.close {
+				padding: 5rpx;
+			}
+		}
+
+		.infoMain {
+			background: #fff;
+			overflow: hidden;
+			padding: 30rpx;
+			border-radius: 30rpx 30rpx 0 0;
+
+			scroll-view {
+				max-height: 60vh;
+
+				.content {
+					.row {
 						display: flex;
-						align-items: center;
+						padding: 16rpx 0;
+						line-height: 1.7em;
+
+						.label {
+							text-align: right;
+							width: 160rpx;
+							color: $text-font-color-3;
+						}
+
+						.popupText {
+							flex: 1;
+							width: 0;
+						}
+
+						.scoreText {
+							display: flex;
+							align-items: center;
+
+							.color {
+								margin-left: 10rpx;
+							}
+						}
 
 						.color {
-							margin-left: 10rpx;
-						}
-					}
-
-					.color {
-						color: $theme-color;
-					}
-
-					.tabs {
-						display: flex;
-						flex-wrap: wrap;
-
-						.tab {
-							border: 1rpx solid $theme-color;
 							color: $theme-color;
-							font-size: 22rpx;
-							padding: 10rpx 30rpx;
-							border-radius: 40rpx;
-							line-height: 1em;
-							margin: 0rpx 10rpx 10rpx 0rpx;
+						}
+
+						.tabs {
+							display: flex;
+							flex-wrap: wrap;
+
+							.tab {
+								border: 1rpx solid $theme-color;
+								color: $theme-color;
+								font-size: 22rpx;
+								padding: 10rpx 30rpx;
+								border-radius: 40rpx;
+								line-height: 1em;
+								margin: 0rpx 10rpx 10rpx 0rpx;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
 
-	.ScoreMain {
-		background: #fff;
-		overflow: hidden;
-		padding: 30rpx;
-		width: 60vw;
-		border-radius: 30rpx;
+		.ScoreMain {
+			background: #fff;
+			overflow: hidden;
+			padding: 30rpx;
+			width: 60vw;
+			border-radius: 30rpx;
 
-		.content {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 30rpx 0;
+			.content {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 30rpx 0;
 
-			.userScoreText {
-				color: #ffca3e;
-				padding-left: 10rpx;
-				width: 80rpx;
-				line-height: 1em;
-				text-align: right;
+				.userScoreText {
+					color: #ffca3e;
+					padding-left: 10rpx;
+					width: 80rpx;
+					line-height: 1em;
+					text-align: right;
+				}
+			}
+
+			.footer {
+				padding: 10rpx 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 
-		.footer {
-			padding: 10rpx 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 	}
-
-}
 </style>

@@ -1,19 +1,20 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const common_assets = require("../../common/assets.js");
+const utils_system = require("../../utils/system.js");
 if (!Array) {
-  const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
   const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
+  const _easycom_uni_dateformat2 = common_vendor.resolveComponent("uni-dateformat");
   const _easycom_uni_rate2 = common_vendor.resolveComponent("uni-rate");
   const _easycom_uni_popup2 = common_vendor.resolveComponent("uni-popup");
-  (_easycom_uni_dateformat2 + _easycom_uni_icons2 + _easycom_uni_rate2 + _easycom_uni_popup2)();
+  (_easycom_uni_icons2 + _easycom_uni_dateformat2 + _easycom_uni_rate2 + _easycom_uni_popup2)();
 }
-const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
+const _easycom_uni_dateformat = () => "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat.js";
 const _easycom_uni_rate = () => "../../uni_modules/uni-rate/components/uni-rate/uni-rate.js";
 const _easycom_uni_popup = () => "../../uni_modules/uni-popup/components/uni-popup/uni-popup.js";
 if (!Math) {
-  (_easycom_uni_dateformat + _easycom_uni_icons + _easycom_uni_rate + _easycom_uni_popup)();
+  (_easycom_uni_icons + _easycom_uni_dateformat + _easycom_uni_rate + _easycom_uni_popup)();
 }
 const _sfc_main = {
   __name: "detail",
@@ -38,7 +39,10 @@ const _sfc_main = {
     };
     const userScore = common_vendor.ref(0);
     const userScoreQuiet = () => {
-      common_vendor.index.__f__("log", "at pages/detail/detail.vue:147", "评分好了");
+      common_vendor.index.__f__("log", "at pages/detail/detail.vue:151", "评分好了");
+    };
+    const goBack = () => {
+      common_vendor.index.navigateBack();
     };
     return (_ctx, _cache) => {
       return common_vendor.e({
@@ -50,64 +54,71 @@ const _sfc_main = {
         d: mask.value
       }, mask.value ? {
         e: common_vendor.p({
+          type: "left",
+          size: "24",
+          color: "#fff"
+        }),
+        f: common_vendor.o(goBack),
+        g: common_vendor.unref(utils_system.getStatusHeightValue)() + "px",
+        h: common_vendor.p({
           date: /* @__PURE__ */ new Date(),
           format: "hh:mm"
         }),
-        f: common_vendor.p({
+        i: common_vendor.p({
           date: /* @__PURE__ */ new Date(),
           format: "MM月dd日"
         }),
-        g: common_vendor.p({
+        j: common_vendor.p({
           type: "info",
           size: "24"
         }),
-        h: common_vendor.o(openPopupDetail),
-        i: common_vendor.p({
+        k: common_vendor.o(openPopupDetail),
+        l: common_vendor.p({
           type: "star",
           size: "24"
         }),
-        j: common_vendor.o(openPopupScore),
-        k: common_vendor.p({
+        m: common_vendor.o(openPopupScore),
+        n: common_vendor.p({
           type: "download",
           size: "22"
         })
       } : {}, {
-        l: common_vendor.p({
+        o: common_vendor.p({
           type: "close",
-          size: "24"
+          size: "22"
         }),
-        m: common_vendor.o(closePopupDetail),
-        n: common_vendor.p({
+        p: common_vendor.o(closePopupDetail),
+        q: common_vendor.p({
           readonly: true,
           touchable: false,
           value: 4.5
         }),
-        o: common_vendor.f(3, (value, k0, i0) => {
+        r: common_vendor.f(3, (value, k0, i0) => {
           return {};
         }),
-        p: common_vendor.sr(popupDetail, "eca06f3c-5", {
+        s: common_vendor.sr(popupDetail, "eca06f3c-6", {
           "k": "popupDetail"
         }),
-        q: common_vendor.p({
+        t: common_vendor.p({
           type: "bottom"
         }),
-        r: common_vendor.p({
+        v: common_vendor.p({
           type: "close",
           size: "24"
         }),
-        s: common_vendor.o(closePopupScore),
-        t: common_vendor.o(($event) => userScore.value = $event),
-        v: common_vendor.p({
+        w: common_vendor.o(closePopupScore),
+        x: common_vendor.o(($event) => userScore.value = $event),
+        y: common_vendor.p({
           allowHalf: true,
           modelValue: userScore.value
         }),
-        w: common_vendor.t(userScore.value),
-        x: common_vendor.o(userScoreQuiet),
-        y: !userScore.value,
-        z: common_vendor.sr(popupScore, "eca06f3c-8", {
+        z: common_vendor.t(userScore.value),
+        A: common_vendor.o(userScoreQuiet),
+        B: !userScore.value,
+        C: common_vendor.sr(popupScore, "eca06f3c-9", {
           "k": "popupScore"
         }),
-        A: common_vendor.p({
+        D: common_vendor.p({
           type: "center",
           ["is-mask-click"]: false
         })

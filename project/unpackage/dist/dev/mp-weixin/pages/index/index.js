@@ -17,6 +17,11 @@ const allNavBar = () => "../../components/all-nav-bar/all-nav-bar.js";
 const _sfc_main = {
   __name: "index",
   setup(__props) {
+    const goDetail = () => {
+      common_vendor.index.navigateTo({
+        url: "../../pages/detail/detail"
+      });
+    };
     return (_ctx, _cache) => {
       return {
         a: common_assets._imports_0,
@@ -45,12 +50,13 @@ const _sfc_main = {
           return {};
         }),
         j: common_assets._imports_3,
-        k: common_vendor.f(8, (value, k0, i0) => {
+        k: common_vendor.o(goDetail),
+        l: common_vendor.f(8, (value, k0, i0) => {
           return {
             a: "1cf27b2a-7-" + i0
           };
         }),
-        l: common_vendor.p({
+        m: common_vendor.p({
           isBox: true
         })
       };

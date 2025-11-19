@@ -2,6 +2,7 @@
   "navigationBarTitleText": "我的",
   "navigationStyle": "custom",
   "usingComponents": {
-    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons"
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "all-nav-bar": "../../components/all-nav-bar/all-nav-bar"
   }
 }

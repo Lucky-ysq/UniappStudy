@@ -54,7 +54,7 @@
 			</Titile>
 			<view class="imageSty">
 				<scroll-view scroll-x>
-					<view class="box" v-for="value in 8">
+					<view class="box" v-for="value in 8" @click="goDetail">
 						<image src="/common/image/preview_small.webp" mode="aspectFill" />
 					</view>
 				</scroll-view>
@@ -91,6 +91,13 @@ import {
 import Titile from '../../components/titile/titile.vue';
 import gripIamge from '../../components/gripImag/gripImag.vue';
 import allNavBar from '../../components/all-nav-bar/all-nav-bar.vue'
+
+
+const goDetail = () => {
+	uni.navigateTo({
+		url:"../../pages/detail/detail"
+	});
+}
 </script>
 
 <style lang="scss" scoped>

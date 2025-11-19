@@ -1,9 +1,9 @@
 <template>
 	<view class="all">
 		<view class="navBar">
-			<view class="status" :style="{ height: statusHeightValue + 'px' }">
+			<view class="status" :style="{ height: getStatusHeightValue() + 'px' }">
 			</view>
-			<view class="titleBar" :style="{ height: menuButtonValue + 'px' }">
+			<view class="titleBar" :style="{ height: getMenuButtonValue() + 'px' }">
 				<view class="Bigtext">
 					<slot></slot>
 				</view>
@@ -13,17 +13,14 @@
 				</view>
 			</view>
 		</view>
-		<view class="fill" :style="{ height: (statusHeightValue + menuButtonValue) + 'px' }">
+		<view class="fill" :style="{ height: getNavbar() + 'px' }">
 		</view>
 	</view>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-let statusHeight = uni.getSystemInfoSync();
-let statusHeightValue = ref(statusHeight.statusBarHeight);
-let { top, height } = uni.getMenuButtonBoundingClientRect();
-let menuButtonValue = ref(height + ((top - statusHeightValue.value) * 2));
+import {getStatusHeightValue,getMenuButtonValue,getNavbar} from '@/utils/system.js';
 
 
 </script>

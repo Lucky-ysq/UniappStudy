@@ -1,9 +1,10 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 if (!Math) {
-  gripImag();
+  (allNavBar + gripImag)();
 }
 const gripImag = () => "../../components/gripImag/gripImag.js";
+const allNavBar = () => "../../components/all-nav-bar/all-nav-bar.js";
 const _sfc_main = {
   __name: "leave",
   setup(__props) {
@@ -11,7 +12,7 @@ const _sfc_main = {
       return {
         a: common_vendor.f(15, (value, k0, i0) => {
           return {
-            a: "70c09db4-0-" + i0
+            a: "70c09db4-1-" + i0
           };
         })
       };

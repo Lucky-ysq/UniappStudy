@@ -2,6 +2,7 @@
   "navigationBarTitleText": "分类",
   "navigationStyle": "custom",
   "usingComponents": {
-    "grip-imag": "../../components/gripImag/gripImag"
+    "grip-imag": "../../components/gripImag/gripImag",
+    "all-nav-bar": "../../components/all-nav-bar/all-nav-bar"
   }
 }
