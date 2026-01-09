@@ -7,10 +7,10 @@
 				<view class="Bigtext">
 					<slot></slot>
 				</view>
-				<view class="search">
-					<uni-icons type="search" size="20" color="#999" class="icon"></uni-icons>
+				<navigator url="/pages/search/search" class="search">
+					<uni-icons type="search" size="20" color="#999" class="icon"></uni-icons> 
 					<text class="text">搜索</text>
-				</view>
+				</navigator>
 			</view>
 		</view>
 		<view class="fill" :style="{ height: getNavbar() + 'px' }">
@@ -22,12 +22,10 @@
 import { ref } from 'vue';
 import {getStatusHeightValue,getMenuButtonValue,getNavbar} from '@/utils/system.js';
 
-
 </script>
 
 <style lang="scss" scoped>
 .all {
-
 	.navBar {
 		position: fixed;
 		top: 0;

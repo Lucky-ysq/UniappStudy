@@ -1,5 +1,7 @@
 <template>
-	<view class="user pageColor">
+<!-- 	<view :style="{height:getNavbar() + 'px'}">
+	</view> -->
+	<view class="user pageColor" v-if="Data">
 		<all-nav-bar>
 			<slot>我的</slot>
 		</all-nav-bar>
@@ -8,14 +10,15 @@
 				<image src="/static/xxmLogo.png" mode="aspectFill" />
 			</view>
 			<view class="row1">
-				如初
+				{{Data?.IP}}
 			</view>
 			<view class="row2">
-				来自于：河北
+				来自于：
+				{{Data?.address.city || Data?.address.country || Data?.address.province}}
 			</view>
 		</view>
 		<view class="section ">
-			<navigator url="/pages/leave/leave" open-type="reLaunch">
+			<navigator url="/pages/limitList/limitList?name=我的下载&type=download" open-type="reLaunch">
 				<view class="row">
 					<view class="left">
 						<uni-icons type="contact" size="20"></uni-icons>
@@ -24,23 +27,23 @@
 						</view>
 					</view>
 					<view class="right">
-						<view class="text">22</view>
+						<view class="text">{{Data?.downloadSize}}</view>
 						<uni-icons type="right" size="16"></uni-icons>
 					</view>
 				</view>
 			</navigator>
 
 
-			<navigator url="/pages/leave/leave" open-type="reLaunch">
+			<navigator url="/pages/limitList/limitList?name=我的评分&type=score" open-type="reLaunch">
 				<view class="row">
 					<view class="left">
 						<uni-icons type="contact" size="20"></uni-icons>
 						<view class="text">
-							我的收藏
+							我的评分
 						</view>
 					</view>
 					<view class="right">
-						<view class="text">22</view>
+						<view class="text">{{Data?.scoreSize}}</view>
 						<uni-icons type="right" size="16"></uni-icons>
 					</view>
 				</view>
@@ -81,7 +84,7 @@
 						</view>
 					</view>
 					<view class="right">
-						<view class="text">22</view>
+						<view class="text"></view>
 						<uni-icons type="right" size="16"></uni-icons>
 					</view>
 				</view>
@@ -96,17 +99,38 @@
 						</view>
 					</view>
 					<view class="right">
-						<view class="text">22</view>
+						<view class="text"></view>
 						<uni-icons type="right" size="16"></uni-icons>
 					</view>
 				</view>
 			</navigator>
 		</view>
 	</view>
+
+	<view class="loadingSty" v-else>
+		<uni-load-more status="loading"></uni-load-more>
+	</view>
 </template>
 
 <script setup>
+	// import {
+	// 	getNavbar
+	// } from '@/utils/system.js'
 	import allNavBar from '../../components/all-nav-bar/all-nav-bar.vue'
+	import {
+		apiGetUserPageData
+	} from "@/api/apis.js"
+	import {
+		ref
+	} from 'vue'
+	const Data = ref(null)
+
+	const getUserPageData = async () => {
+		let res = await apiGetUserPageData();
+		Data.value = res.data
+	}
+
+	getUserPageData();
 </script>
 
 <style lang="scss" scoped>

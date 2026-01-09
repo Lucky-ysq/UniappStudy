@@ -8,7 +8,7 @@
     "urlCheck": false,
     "es6": true,
     "postcss": false,
-    "minified": false,
+    "minified": true,
     "newFeature": true,
     "bigPackageSizeSupport": true,
     "babelSetting": {
@@ -18,7 +18,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.10.1",
+  "libVersion": "3.13.0",
   "appid": "wxdafad6a22bd0fb0b",
   "projectname": "project",
   "condition": {

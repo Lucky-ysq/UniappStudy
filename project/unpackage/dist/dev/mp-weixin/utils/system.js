@@ -1,17 +1,13 @@
 "use strict";
 const common_vendor = require("../common/vendor.js");
 const statusHeight = common_vendor.index.getSystemInfoSync();
-const getStatusHeightValue = () => statusHeight.statusBarHeight;
+const getStatusHeightValue = () => statusHeight.statusBarHeight || 15;
 const getMenuButtonValue = () => {
-  if (common_vendor.index.getMenuButtonBoundingClientRect()) {
-    const {
-      top,
-      height
-    } = common_vendor.index.getMenuButtonBoundingClientRect();
-    return height + (top - getStatusHeightValue()) * 2;
-  } else {
-    return 40;
-  }
+  const {
+    top,
+    height
+  } = common_vendor.index.getMenuButtonBoundingClientRect();
+  return height + (top - getStatusHeightValue()) * 2;
 };
 const getNavbar = () => getStatusHeightValue() + getMenuButtonValue();
 exports.getMenuButtonValue = getMenuButtonValue;

@@ -1,0 +1,1 @@
+<view class="titleSty data-v-cc60cafc"><view class="left data-v-cc60cafc"><slot name="left"></slot></view><view class="right data-v-cc60cafc"><slot name="right"></slot></view></view>

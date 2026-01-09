@@ -41,9 +41,9 @@
   top: 0;
   background: rgba(250, 129, 90, 0.7);
   color: #fff;
-  padding: 2rpx 10rpx;
+  padding: 8rpx 14rpx;
   font-size: 22rpx;
-  border-radius: 0 0 20rpx 0;
+  border-radius: 0 0 25rpx 0;
   -webkit-backdrop-filter: blur(10rpx);
           backdrop-filter: blur(10rpx);
   transform: scale(0.8);
